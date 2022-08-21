@@ -1,0 +1,46 @@
+/* cairo-regular - latin */
+@font-face {
+    font-family: 'Cairo';
+    font-style: normal;
+    display: swap;
+    font-weight: 400;
+    src: local(''),
+         url('/./fonts/cairo-v20-latin-regular.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+         url('/./fonts/cairo-v20-latin-regular.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+  }
+  /* cairo-Medium - latin */
+  @font-face {
+    font-family: 'Cairo';
+    font-style: normal;
+    display: swap;
+    font-weight: 500;
+    src: local(''),
+         url('/./fonts/cairo-v20-latin-500.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+         url('/./fonts/cairo-v20-latin-500.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+  }
+  /* cairo-Bold - latin */
+  @font-face {
+    font-family: 'Cairo';
+    font-style: normal;
+    display: swap;
+    font-weight: 700;
+    src: local(''),
+         url('/./fonts/cairo-v20-latin-700.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+         url('/fonts/cairo-v20-latin-700.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+  }
+  /* outfit-Blod - latin */
+@font-face {
+    font-family: 'Outfit';
+    font-style: normal;
+    display: swap;
+    font-weight: 700;
+    src: local(''),
+         url('/./fonts/outfit-v6-latin-700.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+         url('/./fonts/outfit-v6-latin-700.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+  }
+
+
+$Black: #131517;
+$Orange: #F59C0C;
+$Grey: #7D8591;
+$White: #FFFFFF;
