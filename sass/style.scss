@@ -1,3 +1,26 @@
-body{
-    color: black;
+@import "components/variables";
+@import "components/textStyle";
+@import "components/buttons";
+@import "components/cards";
+@import "components/header";
+@import "components/footer";
+@import "components/animation";
+
+
+body {
+    color: $Black;
+    @include PStyle
 }
+
+h1 {
+    @include H1Style
+}
+
+h2 {
+    @include H2Style
+}
+
+h3{
+    @include H3Style
+}
+
