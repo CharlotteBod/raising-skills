@@ -1,33 +1,36 @@
-$Cairo : 'Cairo';
-$Outfit : 'Outfit';
-
-
 @mixin H1Style {
     font-family: $Cairo;
-    font-size: 5rem;
+    font-size: 3rem;
     font-weight: 700;
+    text-transform: uppercase;
+    line-height: 5rem;
+    color: $White;
+    span{
+        color: $DarkOrange;
+    }
 }
 
 @mixin H2Style {
     font-family: $Cairo;
-    font-size: 4rem;
+    font-size: 2.4rem;
     font-weight: 700;
+    margin-bottom: $H2Space;
 }
 
 @mixin H3Style {
     font-family: $Outfit;
-    font-size: 3rem;
+    font-size: 2.2rem;
     font-weight: 700;
 }
 
 @mixin PStyle {
     font-family: $Cairo;
-    font-size: 2rem;
+    font-size: 1.6rem;
     font-weight: 500;
 }
 
 @mixin NavStyle {
     font-family: $Cairo;
-    font-size: 2rem;
+    font-size: 1.8rem;
     font-weight: 700;
 }

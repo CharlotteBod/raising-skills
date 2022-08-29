@@ -6,10 +6,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/style.min.css">
+    <link rel="stylesheet" href="css/fontello.css">
     <title>Accueil</title>
 </head>
 <body>
     <header>
+        <!-- Ajouter le burger -->
+        <div class="header_content">
+            <a href="#"> <img src="/images/logo_header_rs.svg" alt="Logo Raising Skills"></a>
+            <nav>
+                <ul class="nav_ul">
+                    <li class="nav_ul_li"><a href="#">Accueil</a></li>
         <div class="header_content">
             <img src="/images/logo_header_rs.svg" alt="Logo Raising Skills">
             <nav>
@@ -29,6 +36,19 @@
 
         <section class="hero">
             <!-- Vecteur dégradé en background -->
+            <div class="hero_content container">
+
+                <div class="hero_content_text">
+                    <!-- H1 en Uppercase -->
+                    <h1>ensemble,<br> <span>digitalisons</span> <br> vos formations</h1>
+                    <p class="hero_content_text_p">Vos métiers, vos projets, notre expertise</p>
+                    <a class="button button_discover" href="#">Découvrez nous</a>
+                </div>
+
+                <div class="hero_content_img">
+                    <img src="/images/illu_hero.svg" alt="Illustration d'un personnage devant un ordinateur">
+                </div>
+
             <div class="hero_content">
                 <div class="container">
                     <div class="hero_content_text">
@@ -43,6 +63,39 @@
                 </div>
             </div>
 
+        </section>
+
+        <section class="services container">
+            <h2>Nos services</h2>
+            <div class="services_cards">
+                <div class="services_card services_card_1">
+                    <h3>conception de modules digitale learning</h3>
+                    <p>Vous souhaitez aller plus loin et vous lancer dans l'aventure digitale ?</p>
+                    <a class="button_more" href="#">+</a>
+                </div>
+                <div class="services_card services_card_2">
+                    <h3>formation</h3>
+                    <p>Vous souhaitez former vos équipes à la création de contenu pédagogique digital ?</p>
+                    <a class="button_more" href="#">+</a>
+                </div>
+                <div class="services_card services_card_3">
+                    <h3>intégration</h3>
+                    <p>Vous ne disposez pas des compétences pour intégrer vos contenus ou souhaitez moderniser vos
+                        contenus existants ?</p>
+                    <a class="button_more" href="#">+</a>
+                </div>
+                <div class="services_card services_card_4">
+                    <h3>accompagnement et conseils</h3>
+                    <p>Vous souhaitez digitaliser vos formations ? Nous vous accompagnons dans ce processus.</p>
+                    <a class="button_more" href="#">+</a>
+                </div>
+                <div class="services_card services_card_5">
+                    <h3>sos storyline</h3>
+                    <p>Vous rencontrez des problèmes avec vos fichiers Storyline ? Analyse et réparation de vos
+                        fichiers</p>
+                    <a class="button_more" href="#">+</a>
+                </div>
+            </div>
         </section>
 
         <section class="services">
@@ -95,6 +148,7 @@
                 </div>
             </div>
         </section>
+        
         <section class="choix container">
             <h2>Pourquoi nous choisir ?</h2>
             <div class="choix_cards">
@@ -148,6 +202,8 @@
 
         </section>
         <section class="blog container">
+            <h2>Actualités</h2>
+        <section class="blog container">
             <h2>Blog</h2>
             <div class="blog_content">
                 <div class="blog_content_cards">
@@ -185,6 +241,18 @@
                 <a class="button button_articles" href="#">Voir tous les articles</a>
             </div>
         </section>
+
+        <section class="newsletter container">
+            <h2>Inscrivez-vous à la newsletter</h2>
+            <div class="newsletter_content">
+                <p class="newsletter_content_text">Inscrivez-vous pour recevoir les dernières nouveautés de Raising
+                    Skills</p>
+                <div class="newsletter_content_input">
+                    <label for="newsletter_mail">Adresse e-mail</label>
+                    <input type="email" name="newsletter_mail" id="newsletter_mail" required>
+                    <input type="checkbox" id="cgc" name="cgc" checked>
+                    <label for="cgc">En m’inscrivant, je reconnais avoir pris connaissance de la politique de
+                        confidentialité.</label>
         <section class="newsletter container">
             <h2>Inscrivez-vous à la newsletter</h2>
             <div class="newsletter_content">
