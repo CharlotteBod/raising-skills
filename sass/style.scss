@@ -134,26 +134,12 @@ header {
     }
 }
 
-    .change #bar1 {
-        transform: translateY(15px) rotate(-45deg);
-    }
 
-    .change #bar2 {
-        opacity: 0;
-    }
-
-    .change #bar3 {
-        transform: translateY(-6px) rotate(45deg);
-    }
-
-    .change-nav #nav_ul {
-        transform: translateX(32rem);
-    }
-
-
-.hero {
-    padding: 3rem 0;
-    background-image: url(/images/background-hero.svg);
+.hero{
+    padding-top: 3rem;
+    padding-bottom: 12rem;
+    margin-bottom: 0;
+    background-image: url(/images/background-hero_mobile.svg);
     background-repeat: no-repeat;
 
     .hero_content {
