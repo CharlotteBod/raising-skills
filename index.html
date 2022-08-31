@@ -15,9 +15,20 @@
     <header>
         <!-- Ajouter le burger -->
         <div class="header_content">
-            <img src="/images/logo_header_rs.svg" alt="Logo Raising Skills">
-            <nav>
-                <ul class="nav_ul">
+            <div class="header_content_up">
+                <div class="menu-bg" id="menu-bg"></div>
+
+                <div id="menu-bar" onclick="menuOnClick()">
+                    <div id="bar1" class="bar"></div>
+                    <div id="bar2" class="bar"></div>
+                    <div id="bar3" class="bar"></div>
+                </div>
+
+                <a href="#"><img src="/images/logo_header_rs.svg" alt="Logo Raising Skills"></a>
+            </div>
+
+            <nav class="header_navbar nav" id="nav">
+                <ul class="header_navbar_ul" id="nav_ul">
                     <li class="nav_ul_li"><a href="#">Accueil</a></li>
                     <li class="nav_ul_li"><a href="#">Nos services</a></li>
                     <li class="nav_ul_li"><a href="#">Qui sommes-nous</a></li>
@@ -66,7 +77,7 @@
                     <h3>intégration</h3>
                     <p>Vous ne disposez pas des compétences pour intégrer vos contenus ou souhaitez moderniser vos
                         contenus existants ?</p>
-                        <a class="button_more fontello" href="#"><i class="icon-plus"></i></a>
+                    <a class="button_more fontello" href="#"><i class="icon-plus"></i></a>
                 </div>
                 <div class="services_card services_card_4">
                     <h3>accompagnement et conseils</h3>
@@ -77,44 +88,8 @@
                     <h3>sos storyline</h3>
                     <p>Vous rencontrez des problèmes avec vos fichiers Storyline ? Analyse et réparation de vos
                         fichiers</p>
-                        <a class="button_more fontello" href="#"><i class="icon-plus"></i></a>
+                    <a class="button_more fontello" href="#"><i class="icon-plus"></i></a>
                 </div>
-            </div>
-        </section>
-
-        <section class="services">
-            <div class="container">
-                <h2>Nos services</h2>
-                <div class="services_cards">
-                    <div class="services_card">
-                        <h3>conception de modules digitale learning</h3>
-                        <p>Vous souhaitez aller plus loin et vous lancer dans l'aventure digitale ?</p>
-                        <a class="button_more" href="#">+</a>
-                    </div>
-                    <div class="services_card">
-                        <h3>intégration</h3>
-                        <p>Vous ne disposez pas des compétences pour intégrer vos contenus ou souhaitez moderniser vos
-                            contenus existants ?</p>
-                        <a class="button_more" href="#">+</a>
-                    </div>
-                    <div class="services_card">
-                        <h3>formation</h3>
-                        <p>Vous souhaitez former vos équipes à la création de contenu pédagogique digital ?</p>
-                        <a class="button_more" href="#">+</a>
-                    </div>
-                    <div class="services_card">
-                        <h3>accompagnement et conseils</h3>
-                        <p>Vous souhaitez digitaliser vos formations ? Nous vous accompagnons dans ce processus.</p>
-                        <a class="button_more" href="#">+</a>
-                    </div>
-                    <div class="services_card">
-                        <h3>sos storyline</h3>
-                        <p>Vous rencontrez des problèmes avec vos fichiers Storyline ? Analyse et réparation de vos
-                            fichiers</p>
-                        <a class="button_more" href="#">+</a>
-                    </div>
-                </div>
-            </div>
             </div>
         </section>
 
@@ -134,7 +109,7 @@
                 </div>
             </div>
         </section>
-        
+
         <section class="choix container">
             <h2>Pourquoi nous choisir ?</h2>
             <div class="choix_cards">
@@ -215,13 +190,20 @@
             <div class="newsletter_content">
                 <p class="newsletter_content_text">Inscrivez-vous pour recevoir les dernières nouveautés de Raising
                     Skills</p>
+                    
                 <div class="newsletter_content_input">
-                    <label for="newsletter_mail">Adresse e-mail</label>
-                    <input type="email" name="newsletter_mail" id="newsletter_mail" required>
-                    <input type="checkbox" id="cgc" name="cgc" checked>
-                    <label for="cgc">En m’inscrivant, je reconnais avoir pris connaissance de la politique de
-                        confidentialité.</label>
+                    <label class="newsletter_content_input_label-mail " for="newsletter_mail">Adresse e-mail</label>
+                    <input class="newsletter_content_input_input-mail" type="email" name="newsletter_mail"
+                        id="newsletter_mail" required>
+
+                    <div class="newsletter_content_input_cgc">
+                        <input type="checkbox" id="cgc" name="cgc" required>
+                        <label for="cgc">En m’inscrivant, je reconnais avoir pris connaissance de la politique de
+                            confidentialité.</label>
+
+                    </div>
                 </div>
+
                 <div class="newsletter_content_submit">
                     <input class="button button_send" type="submit" value="Je m'inscris">
                 </div>
@@ -258,6 +240,9 @@
             </ul>
         </div>
     </footer>
+
+    <!-- SCRIPT JS GLOBAL -->
+    <script src="./js/script.js"></script>
 
 </body>
 
