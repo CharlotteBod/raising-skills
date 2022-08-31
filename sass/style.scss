@@ -18,32 +18,38 @@ h2 {
     @include H2Style
 }
 
-h3{
+h3 {
     @include H3Style
 }
 
-.container{
+.container {
     padding: 0 .5rem;
 }
 
-section{
+section {
     margin-bottom: $EcartSection;
 }
 
-.button{
+.button {
     @include ButtonStyle
 }
 
-header{
-    .header_content{
+.fontello {
+    @include FontelloStyle
+}
+
+header {
+    .header_content {
         background-color: $DarkBlue;
-        img{
+
+        img {
             max-width: 15rem;
             margin: auto;
         }
-        nav{
-            .nav_ul{
-                li a{
+
+        nav {
+            .nav_ul {
+                li a {
                     color: $White;
                 }
             }
@@ -51,29 +57,31 @@ header{
     }
 }
 
-.hero{
+.hero {
     padding-top: 3rem;
-    padding-bottom: 12rem;
-    margin-bottom: 0;
+    padding-bottom: 14rem;
     background-image: url(/images/background-hero_mobile.svg);
     background-repeat: no-repeat;
-    .hero_content{
-        .hero_content_text{
-            .hero_content_text_p{
+    background-size: 100%;
+
+    .hero_content {
+        .hero_content_text {
+            .hero_content_text_p {
                 color: $White;
             }
         }
-        .hero_content_img{
+
+        .hero_content_img {
             padding: 2rem 0;
         }
     }
 }
 
-.services{
-    .services_cards{
-        .services_card{
+.services {
+    .services_cards {
+        .services_card {
             background-position: center;
-            background-repeat: no-repeat;;
+            background-repeat: no-repeat;
             background-size: contain;
             background-blend-mode: darken;
             position: relative;
@@ -88,71 +96,247 @@ header{
             align-items: center;
             text-align: center;
             gap: 1.5rem;
-            h3{
+            border-radius: 1rem;
+
+            h3 {
                 text-transform: uppercase;
             }
-            a{
+
+            a {
                 color: $White;
             }
         }
-        .services_card_1{
+
+        .services_card_1 {
             background-image: url(/images/services_illu_conception.svg);
         }
-        .services_card_2{
+
+        .services_card_2 {
             background-image: url(/images/services_illu_formation.svg);
         }
-        .services_card_3{
+
+        .services_card_3 {
             background-image: url(/images/services_illu_integration.svg);
         }
-        .services_card_4{
+
+        .services_card_4 {
             background-image: url(/images/services_illu_accompagnement.svg);
         }
-        .services_card_5{
+
+        .services_card_5 {
             background-image: url(/images/services_illu_sos.svg);
         }
     }
 }
 
-.nous{
+.nous {
     background-color: $DarkBlue;
-    .nous_content{
-        .nous_content_text{
+
+    .nous_content {
+        .nous_content_text {
             padding: .5rem;
             color: $White;
-            
+
         }
     }
 }
 
-.choix{
-    .choix_cards{
-        .choix_card{
+.choix {
+    .choix_cards {
+        .choix_card {
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
             text-align: center;
             margin-bottom: 2rem;
-            .choix_card_num, .choix_card_titre{
+
+            .choix_card_num,
+            .choix_card_titre {
                 color: $Orange;
                 text-transform: uppercase;
                 font-family: $Outfit;
                 font-weight: 700;
             }
-            .choix_card_num{
+
+            .choix_card_num {
                 font-size: 8rem;
             }
-            .choix_card_titre{
+
+            .choix_card_titre {
                 font-size: 3rem;
             }
         }
     }
 }
 
-.offres{
-    background-image: url(/images/background_offres_mobile.svg);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+.offres {
+    position: relative;
     color: $White;
+    background-color: $DarkBlue;
+    margin: 10rem 0;
+
+    &::before {
+        content: url(/images/background-up-offres.svg);
+        position: absolute;
+        top: -11rem;
+        left: 0;
+        width: 100%;
+        z-index: -1;
+    }
+
+    &::after {
+        content: url(/images/background-down-offres.svg);
+        position: absolute;
+        bottom: -11rem;
+        left: 0;
+        width: 100%;
+        z-index: -1;
+    }
+
+    .offres_content {
+        z-index: 2;
+
+        .offres_content_cards {
+            .offres_content_card {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                text-align: center;
+                margin-bottom: 3rem;
+
+                h3,
+                span {
+                    text-transform: uppercase;
+                }
+
+                span {
+                    font-size: 2.6rem;
+
+                }
+            }
+        }
+    }
+
+}
+
+.blog {
+    .blog_content_cards {
+        .blog_content_card {
+            .blog_content_card_content {
+                .blog_content_card_content_img {
+                    border-radius: 1rem 1rem 0 0;
+                    background-color: $DarkBlue;
+
+                    img {
+                        padding: 1rem;
+                    }
+                }
+
+                .blog_content_card_content_text {
+                    border-radius: 0 0 1rem 1rem;
+                    padding: 1rem;
+                    color: $White;
+                    background-color: $Orange;
+
+                    .button_more {
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.newsletter_content {
+    border: solid .3rem;
+    border-image: linear-gradient(125deg, $DarkOrange, $DarkBlue) 1;
+    padding: 1.5rem 0.7rem;
+
+    p {
+        text-align: center;
+        margin-bottom: 1.5rem;
+    }
+
+    .newsletter_content_input {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        gap: 1.5rem;
+
+        .newsletter_content_input_label-mail {
+            font-size: 2.2rem;
+            font-weight: 700;
+            color: $Orange;
+        }
+
+        .newsletter_content_input_input-mail {
+            margin: auto;
+            min-width: 28rem;
+            max-width: 67rem;
+            border: 0.25rem solid $DarkBlue;
+            border-radius: 0.5rem;
+        }
+
+        &::after {
+            content: url(/images/illu_newsletter.svg);
+            max-width: 19rem;
+            top: 0;
+            left: 0;
+            position: absolute;
+            z-index: -1;
+        }
+    }
+
+    .newsletter_content_submit {
+        display: flex;
+        justify-content: center;
+    }
+}
+
+footer {
+    background-color: $DarkBlue;
+    text-align: center;
+    img{
+        margin-bottom: 2rem;
+    }
+    .footer_up {
+        .footer_up_middle{
+            .follow_link{
+                font-family: $Outfit;
+                font-size: 3rem;
+                font-weight: 700;
+                color: $Orange;
+            }
+            .footer_up_middle_rs{
+                ul{
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                }
+            }
+        }
+        .button_contact{
+            margin-bottom: 6rem;
+        }
+    }
+
+    .footer_down {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+
+        ul li {
+            margin-bottom: 1.5rem;
+            a {
+                color: $White;
+            }
+        }
+    }
 }
