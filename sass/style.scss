@@ -25,6 +25,9 @@ h3 {
 
 .container {
     padding: 0 .5rem;
+    @include Tablet{
+        padding: 0 8rem;
+    }
 }
 
 section {
@@ -115,14 +118,15 @@ header {
         }
 
         .header_navbar {
+            @include Mobile {
+                transition: 0.3s ease;
+                position: absolute;
+                left: -25rem;
+                top: 10rem;
+                z-index: 10;
+            }
+
             .header_navbar_ul {
-                @include Mobile {
-                    transition: 0.3s ease;
-                    position: absolute;
-                    left: -25rem;
-                    top: 10rem;
-                    z-index: 10;
-                }
 
                 li a {
                     color: $White;
@@ -131,27 +135,49 @@ header {
                 }
             }
         }
+
+        .change-nav {
+            left: 5rem;
+        }
     }
 }
 
-.hero{
-    padding-top: 3rem;
-    padding-bottom: 12rem;
-    margin-bottom: 0;
-    background-image: url(/images/background-hero_mobile.svg);
+.hero {
+    padding: 3rem 0;
+    background-image: url(/images/background-hero.svg);
     background-repeat: no-repeat;
-
+    background-size: cover;
+    
     .hero_content {
+        display: flex;
+        flex-wrap: wrap;
+	
         .hero_content_text {
             .hero_content_text_p {
                 color: $White;
             }
+        }
+        .hero_content_img{
+            max-width: 70rem;
+            min-width: 28rem;
+            object-fit: cover;
         }
     }
 }
 
 .services {
     .services_cards {
+        display: grid;
+        grid-template-columns: 1fr;
+        justify-items: center;
+        gap: 2rem;
+        @include Tablet{
+            grid-template-columns: repeat(2, 1fr);
+        }
+        @include Laptop{
+            grid-template-columns: repeat(3, 1fr);
+        }
+
         .services_card {
             background-position: center;
             background-repeat: no-repeat;
@@ -161,15 +187,14 @@ header {
             background-color: $DarkBlueCard;
             color: $White;
             padding: 2rem;
-            margin-bottom: 1rem;
             border-radius: 1rem;
             min-height: 30rem;
+            max-width: 41.4rem;
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
             text-align: center;
-            gap: 1.5rem;
 
             h3 {
                 text-transform: uppercase;
@@ -190,6 +215,9 @@ header {
 
         .services_card_3 {
             background-image: url(/images/services_illu_integration.svg);
+            @include Tablet{
+                grid-area: 1 / 2 / 3 / 3;
+            }
         }
 
         .services_card_4 {
@@ -246,24 +274,28 @@ header {
     position: relative;
     color: $White;
     background-color: $DarkBlue;
-    margin: 10rem 0;
+    padding: 5rem 0;
 
     &::before {
-        content: url(/images/background-up-offres.svg);
+        content: "";
         position: absolute;
-        top: -11rem;
-        left: 0;
         width: 100%;
-        z-index: -1;
+        height: .5rem;
+        background-color: $Orange;
+        top: 1rem;
+        left: 0;
+        z-index: 10;
     }
 
     &::after {
-        content: url(/images/background-down-offres.svg);
+        content: "";
         position: absolute;
-        bottom: -11rem;
-        left: 0;
         width: 100%;
-        z-index: -1;
+        height: .5rem;
+        background-color: $Orange;
+        bottom: -1rem;
+        left: 0;
+        z-index: 10;
     }
 
     .offres_content {

@@ -5,9 +5,13 @@
     text-transform: uppercase;
     line-height: 5rem;
     color: $White;
+    @include Tablet{
+        font-size: 5rem;
+    }
     span{
         color: $DarkOrange;
     }
+
 }
 
 @mixin H2Style {
