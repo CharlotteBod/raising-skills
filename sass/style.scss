@@ -104,7 +104,7 @@ header {
                     margin-top: .6rem;
                 }
 
-                @include Tablet {
+                @include Tablet{
                     visibility: hidden;
                 }
 
@@ -128,7 +128,6 @@ header {
 
             .header_navbar_ul {
 
-
                 li a {
                     color: $White;
                     @include NavStyle;
@@ -148,11 +147,11 @@ header {
     background-image: url(/images/background-hero.svg);
     background-repeat: no-repeat;
     background-size: cover;
-
+    
     .hero_content {
         display: flex;
         flex-wrap: wrap;
-
+	
         .hero_content_text {
             .hero_content_text_p {
                 color: $White;
