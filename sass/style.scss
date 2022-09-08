@@ -25,7 +25,8 @@ h3 {
 
 .container {
     padding: 0 .5rem;
-    @include Tablet{
+
+    @include Tablet {
         padding: 0 8rem;
     }
 }
@@ -104,7 +105,7 @@ header {
                     margin-top: .6rem;
                 }
 
-                @include Tablet{
+                @include Tablet {
                     visibility: hidden;
                 }
 
@@ -147,17 +148,18 @@ header {
     background-image: url(/images/background-hero.svg);
     background-repeat: no-repeat;
     background-size: cover;
-    
+
     .hero_content {
         display: flex;
         flex-wrap: wrap;
-	
+
         .hero_content_text {
             .hero_content_text_p {
                 color: $White;
             }
         }
-        .hero_content_img{
+
+        .hero_content_img {
             max-width: 70rem;
             min-width: 28rem;
             object-fit: cover;
@@ -171,10 +173,12 @@ header {
         grid-template-columns: 1fr;
         justify-items: center;
         gap: 2rem;
-        @include Tablet{
+
+        @include Tablet {
             grid-template-columns: repeat(2, 1fr);
         }
-        @include Laptop{
+
+        @include Laptop {
             grid-template-columns: repeat(3, 1fr);
         }
 
@@ -215,7 +219,8 @@ header {
 
         .services_card_3 {
             background-image: url(/images/services_illu_integration.svg);
-            @include Tablet{
+
+            @include Tablet {
                 grid-area: 1 / 2 / 3 / 3;
             }
         }
@@ -326,28 +331,36 @@ header {
 }
 
 .blog {
-    .blog_content_cards {
-        .blog_content_card {
-            .blog_content_card_content {
-                .blog_content_card_content_img {
-                    border-radius: 1rem 1rem 0 0;
-                    background-color: $DarkBlue;
+    .blog_content {
+        display: inline-flex;
+        flex-direction: column;
+        align-items: center;
 
-                    img {
-                        padding: 1rem;
+        .blog_content_cards {
+            .blog_content_card {
+                max-width: 52rem;
+
+                .blog_content_card_content {
+                    .blog_content_card_content_img {
+                        border-radius: 1rem 1rem 0 0;
+                        background-color: $DarkBlue;
+
+                        img {
+                            padding: 1rem;
+                        }
                     }
-                }
 
-                .blog_content_card_content_text {
-                    border-radius: 0 0 1rem 1rem;
-                    padding: 1rem;
-                    color: $White;
-                    background-color: $Orange;
+                    .blog_content_card_content_text {
+                        border-radius: 0 0 1rem 1rem;
+                        padding: 1rem;
+                        color: $White;
+                        background-color: $Orange;
 
-                    .button_more {
-                        display: flex;
-                        align-items: center;
-                        justify-content: center;
+                        .button_more {
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                        }
                     }
                 }
             }
