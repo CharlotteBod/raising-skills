@@ -25,7 +25,6 @@ h3 {
 
 .container {
     padding: 0 .5rem;
-
     @include Tablet {
         padding: 0 8rem;
     }
@@ -152,14 +151,12 @@ header {
     .hero_content {
         display: flex;
         flex-wrap: wrap;
-
         .hero_content_text {
             .hero_content_text_p {
                 color: $White;
             }
         }
-
-        .hero_content_img {
+        .hero_content_img{
             max-width: 70rem;
             min-width: 28rem;
             object-fit: cover;
@@ -173,12 +170,10 @@ header {
         grid-template-columns: 1fr;
         justify-items: center;
         gap: 2rem;
-
-        @include Tablet {
+        @include Tablet{
             grid-template-columns: repeat(2, 1fr);
         }
-
-        @include Laptop {
+        @include Laptop{
             grid-template-columns: repeat(3, 1fr);
         }
 
@@ -219,8 +214,7 @@ header {
 
         .services_card_3 {
             background-image: url(/images/services_illu_integration.svg);
-
-            @include Tablet {
+            @include Tablet{
                 grid-area: 1 / 2 / 3 / 3;
             }
         }
