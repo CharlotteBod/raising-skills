@@ -21,3 +21,16 @@
         @content;
     }
 }
+
+
+@mixin Desktop {
+    @media screen and (min-width: 1250px) {
+        @content;
+    }
+}
+
+@mixin HugeDesktop {
+    @media screen and (min-width: 1800px) {
+        @content;
+    }
+}
