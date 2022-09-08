@@ -157,13 +157,10 @@ header {
     .hero_content {
         display: flex;
         flex-wrap: wrap;
-<<<<<<< HEAD
         justify-content: space-between;
         @include HugeDesktop{
             justify-content: space-evenly;
         }
-=======
->>>>>>> fdc8733eaf43a0a1b6bf70b024277fad25dd34de
         .hero_content_text {
             .hero_content_text_p {
                 color: $White;
