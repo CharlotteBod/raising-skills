@@ -19,18 +19,27 @@
     font-size: 2.4rem;
     font-weight: 700;
     margin-bottom: $H2Space;
+    @include Tablet{
+        font-size: 4rem;
+    }
 }
 
 @mixin H3Style {
     font-family: $Outfit;
     font-size: 2.2rem;
     font-weight: 700;
+    @include Tablet{
+        font-size: 3rem;
+    }
 }
 
 @mixin PStyle {
     font-family: $Cairo;
     font-size: 1.6rem;
     font-weight: 500;
+    @include Tablet{
+        font-size: 2rem;
+    }
 }
 
 @mixin NavStyle {
