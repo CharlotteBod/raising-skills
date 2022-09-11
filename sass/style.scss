@@ -147,10 +147,20 @@ header {
     background-image: url(/images/background-hero.svg);
     background-repeat: no-repeat;
     background-size: cover;
+    @include Desktop{
+        padding: 7rem 0;
+    }
+    @include HugeDesktop{
+        padding-bottom: 19rem;
+    }
 
     .hero_content {
         display: flex;
         flex-wrap: wrap;
+        justify-content: space-between;
+        @include HugeDesktop{
+            justify-content: space-evenly;
+        }
         .hero_content_text {
             .hero_content_text_p {
                 color: $White;
@@ -242,6 +252,10 @@ header {
 
 .choix {
     .choix_cards {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+
         .choix_card {
             display: flex;
             flex-direction: column;
@@ -249,6 +263,7 @@ header {
             align-items: center;
             text-align: center;
             margin-bottom: 2rem;
+            max-width: 40rem;
 
             .choix_card_num,
             .choix_card_titre {
@@ -301,13 +316,20 @@ header {
         z-index: 2;
 
         .offres_content_cards {
+            display: flex;
+            justify-content: center;
+            align-content: center;
+            flex-wrap: wrap;
+
             .offres_content_card {
                 display: flex;
                 flex-direction: column;
                 align-items: center;
-                justify-content: center;
+                justify-content: space-between;
                 text-align: center;
                 margin-bottom: 3rem;
+                max-width: 41rem;
+                padding: 0 4rem;
 
                 h3,
                 span {
@@ -326,11 +348,14 @@ header {
 
 .blog {
     .blog_content {
-        display: inline-flex;
+        display: flex;
         flex-direction: column;
         align-items: center;
 
         .blog_content_cards {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2rem;
             .blog_content_card {
                 max-width: 52rem;
 
@@ -363,6 +388,10 @@ header {
 }
 
 .newsletter_content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     border: solid .3rem;
     border-image: linear-gradient(125deg, $DarkOrange, $DarkBlue) 1;
     padding: 1.5rem 0.7rem;
