@@ -20,6 +20,7 @@
     font-weight: 700;
     margin-bottom: $H2Space;
     @include Laptop{
+
         font-size: 4rem;
     }
 }

@@ -166,6 +166,12 @@ header {
     background-image: url(/images/background-hero.svg);
     background-repeat: no-repeat;
     background-size: cover;
+    @include Desktop{
+        padding: 7rem 0;
+    }
+    @include HugeDesktop{
+        padding-bottom: 19rem;
+    }
 
     @include Desktop {
         padding: 7rem 0;
@@ -179,11 +185,9 @@ header {
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
-
         @include HugeDesktop {
             justify-content: space-evenly;
         }
-
         .hero_content_text {
             .hero_content_text_p {
                 color: $White;
@@ -392,7 +396,6 @@ header {
                 margin-bottom: 3rem;
                 max-width: 41rem;
                 padding: 0 4rem;
-
                 @include Laptop {
                     min-width: 41rem;
                 }
