@@ -19,7 +19,8 @@
     font-size: 2.4rem;
     font-weight: 700;
     margin-bottom: $H2Space;
-    @include Tablet{
+    @include Laptop{
+
         font-size: 4rem;
     }
 }
@@ -28,7 +29,7 @@
     font-family: $Outfit;
     font-size: 2.2rem;
     font-weight: 700;
-    @include Tablet{
+    @include Laptop{
         font-size: 3rem;
     }
 }
@@ -37,7 +38,7 @@
     font-family: $Cairo;
     font-size: 1.6rem;
     font-weight: 500;
-    @include Tablet{
+    @include Laptop{
         font-size: 2rem;
     }
 }
@@ -46,4 +47,7 @@
     font-family: $Cairo;
     font-size: 1.8rem;
     font-weight: 700;
+    @include Laptop{
+        font-size: 2rem;
+    }
 }

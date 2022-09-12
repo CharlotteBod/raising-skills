@@ -25,6 +25,7 @@ h3 {
 
 .container {
     padding: 0 .5rem;
+
     @include Tablet {
         padding: 0 8rem;
     }
@@ -49,6 +50,11 @@ section {
 header {
     .header_content {
         background-color: $DarkBlue;
+        @include Desktop{
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+        }
 
         .header_content_up {
 
@@ -125,8 +131,21 @@ header {
                 top: 10rem;
                 z-index: 10;
             }
+            @include Tablet{
+                position: relative;
+                left: auto;
+                top: auto;
+            }
 
             .header_navbar_ul {
+                @include Tablet{
+                    display: flex;
+                    display: flex;
+                    justify-content: space-evenly;
+                }
+                @include Desktop{
+                    gap: 3rem;
+                }
 
                 li a {
                     color: $White;
@@ -154,11 +173,19 @@ header {
         padding-bottom: 19rem;
     }
 
+    @include Desktop {
+        padding: 7rem 0;
+    }
+
+    @include HugeDesktop {
+        padding-bottom: 29rem;
+    }
+
     .hero_content {
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
-        @include HugeDesktop{
+        @include HugeDesktop {
             justify-content: space-evenly;
         }
         .hero_content_text {
@@ -166,7 +193,8 @@ header {
                 color: $White;
             }
         }
-        .hero_content_img{
+
+        .hero_content_img {
             max-width: 70rem;
             min-width: 28rem;
             object-fit: cover;
@@ -178,12 +206,15 @@ header {
     .services_cards {
         display: grid;
         grid-template-columns: 1fr;
+        place-content: center;
         justify-items: center;
         gap: 2rem;
-        @include Tablet{
+
+        @include Tablet {
             grid-template-columns: repeat(2, 1fr);
         }
-        @include Laptop{
+
+        @include Laptop {
             grid-template-columns: repeat(3, 1fr);
         }
 
@@ -198,12 +229,20 @@ header {
             padding: 2rem;
             border-radius: 1rem;
             min-height: 30rem;
-            max-width: 41.4rem;
+            max-width: 30rem;
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
             text-align: center;
+
+            @include Tablet {
+                min-width: 30rem;
+            }
+
+            @include Desktop {
+                min-width: 41rem;
+            }
 
             h3 {
                 text-transform: uppercase;
@@ -224,7 +263,8 @@ header {
 
         .services_card_3 {
             background-image: url(/images/services_illu_integration.svg);
-            @include Tablet{
+
+            @include Tablet {
                 grid-area: 1 / 2 / 3 / 3;
             }
         }
@@ -241,9 +281,34 @@ header {
 
 .nous {
     background-color: $DarkBlue;
+    position: relative;
+
+    @include Desktop {
+        background-color: transparent;
+
+        &::before {
+            content: url(/images/background_nous.svg);
+            display: inline-block;
+            position: absolute;
+            width: auto;
+            right: 0;
+            bottom: 0;
+            z-index: -1;
+        }
+    }
 
     .nous_content {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+
+        @include Desktop {
+            justify-content: space-between;
+        }
+
         .nous_content_text {
+            max-width: 59rem;
             padding: .5rem;
             color: $White;
         }
@@ -320,6 +385,7 @@ header {
             justify-content: center;
             align-content: center;
             flex-wrap: wrap;
+            gap: 2rem;
 
             .offres_content_card {
                 display: flex;
@@ -330,6 +396,9 @@ header {
                 margin-bottom: 3rem;
                 max-width: 41rem;
                 padding: 0 4rem;
+                @include Laptop {
+                    min-width: 41rem;
+                }
 
                 h3,
                 span {
@@ -443,12 +512,32 @@ header {
 footer {
     background-color: $DarkBlue;
     text-align: center;
+    @include Tablet{
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+    }
 
     img {
         margin-bottom: 2rem;
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 28rem;
+        @include Laptop{
+            margin-left: 0;
+            margin-right: 0;
+        }
     }
 
     .footer_up {
+        @include Tablet{
+            margin-bottom: 2rem;
+            padding-top: 2rem;
+        }
+        @include Laptop{
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+        }
         .footer_up_middle {
             .follow_link {
                 font-family: $Outfit;
@@ -477,11 +566,18 @@ footer {
         align-items: center;
         flex-wrap: wrap;
 
-        ul li {
-            margin-bottom: 1.5rem;
+        .footer_down_links {
+            @include Tablet{
+                display: flex;
+                gap: 3rem;
+            }
+            li {
+                margin-bottom: 1.5rem;
 
-            a {
-                color: $White;
+
+                a {
+                    color: $White;
+                }
             }
         }
     }
